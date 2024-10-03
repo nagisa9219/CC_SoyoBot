@@ -1,0 +1,14 @@
+{
+    "credentials": {
+        "token": "bot-token"
+    },
+    "permissions": {
+        "owner_id": "auto"
+    },
+    "cogs": {
+        "enabled_cogs": [
+            "vc_logging",
+            "random_pick"
+        ]
+    }
+}

@@ -2,13 +2,20 @@ import logging
 import os
 import datetime
 
-if not os.path.exists(f"{os.getcwd()}/src/logs"):
-    os.mkdir(f"{os.getcwd()}/src/logs")
+# Set default log file folder
+logs_path = os.getcwd() + "/logs"
 
+print(logs_path)
+
+# Create logs folder if directory not exist
+if not os.path.exists(logs_path):
+    os.mkdir(logs_path)
+
+# Logger settings
 logger = logging.getLogger("soyo_bot")
 logger.setLevel(logging.DEBUG)
 
-handler_base_filename = f"{os.getcwd()}/src/logs/" + "{:%Y-%m-%d}".format(datetime.datetime.now())
+handler_base_filename = logs_path + "/{:%Y-%m-%d}".format(datetime.datetime.now())
 handler_file_path = f"{handler_base_filename}.log"
 counter = 1
 while os.path.exists(handler_file_path):

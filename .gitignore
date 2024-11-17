@@ -154,3 +154,7 @@ cython_debug/
 
 # Logs
 /logs
+
+# DS_Store
+.DS_Store
+.DS_Store?
